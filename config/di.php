@@ -1,7 +1,7 @@
 <?php
 /**
  * DI依赖注入配置文件
- * 
+ *
  * @license     http://www.phalapi.net/license GPL 协议
  * @link        http://www.phalapi.net/
  * @author dogstar <chanzonghuang@gmail.com> 2017-07-13
@@ -44,6 +44,8 @@ $di->qiniu = new \PhalApi\Qiniu\Lite();
 $di->auth = New AuthLite();
 
 $di->phpExcel = New PHPExcel_Lite();
+
+$di->cors = new \PhalApi\CORS\Lite();
 
 \PhalApi\DI()->cookie = new PhalApi\Cookie();
 

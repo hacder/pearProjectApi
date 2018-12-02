@@ -82,6 +82,18 @@ return array(
         'auth_menu_model' => 'menu_model', // 权限菜单模块表
         'auth_not_check_user' => array() //跳过权限检测的用户
     ),
+	 'cors' => array(
+        //域名白名单
+        'whitelist'   => array(
+            //'http://xxx.xx.xxx',
+            //'http://xxx.xxx.xxx'
+        ),
+        //header头
+        'headers' => array(
+            'Access-Control-Allow-Methods' => 'GET, POST, PUT, DELETE, OPTIONS', //支持的请求类型
+            'Access-Control-Allow-Credentials' => 'true' //支持cookie
+        )
+    ),
     /**
      * 七牛相关配置
      */

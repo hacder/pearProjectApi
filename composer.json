@@ -18,8 +18,9 @@
   ],
   "require": {
     "php": ">=5.3.3",
-    "phalapi/kernal": "2.0.*",
-    "phalapi/task": "2.0.*",
+    "phalapi/cors":"dev-master",
+    "phalapi/kernal": "dev-master",
+    "phalapi/task": "dev-master",
     "phalapi/qiniu": "dev-master",
     "workerman/gateway-worker-for-win" : ">=3.0.0",
     "workerman/gateway-worker" : ">=3.0.0"

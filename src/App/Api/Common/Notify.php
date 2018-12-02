@@ -63,6 +63,7 @@ class Notify extends CommonApi
 
     /**
      * 绑定用户id
+     * @desc 绑定用户id
      * @throws \PhalApi\Exception\BadRequestException
      */
     public function bindClientId()
@@ -79,18 +80,29 @@ class Notify extends CommonApi
             $messageService->joinGroup($clientId, 'user');
         }
     }
-    public function doSomeThing()
-    {
-        self::$Domain->doSomeThing();
-    }
-    public function fixedExecutor()
-    {
-        self::$Domain->fixedExecutor();
-    }
+//    public function doSomeThing()
+//    {
+//        self::$Domain->doSomeThing();
+//    }
+//    public function fixedExecutor()
+//    {
+//        self::$Domain->fixedExecutor();
+//    }
+
+    /**
+     * 消息推送
+     * @desc 消息推送
+     * @throws \PhalApi\Exception\BadRequestException
+     */
     public function pushNotify()
     {
         self::$Domain->pushNotify();
     }
+
+    /**
+     * 任务动态推送
+     * @desc 任务动态推送
+     */
     public function pushTaskRemind()
     {
         self::$Domain->pushTaskRemind();
@@ -148,6 +160,10 @@ class Notify extends CommonApi
         self::$Domain->delNotify($this->ids);
     }
 
+    /**
+     * 标记最后阅读时间
+     * @desc 标记最后阅读时间
+     */
     public function setFinallySendTime()
     {
         self::$Domain->setFinallySendTime($this->ids);
@@ -177,6 +193,7 @@ class Notify extends CommonApi
 
     /**
      * 标记消息为已读
+     * @desc 标记消息为已读
      * @throws \App\Common\Exception\WrongRequestException
      */
     public function ticketRead()
@@ -185,6 +202,7 @@ class Notify extends CommonApi
     }
     /**
      * 批量标记消息为已读
+     * @desc 批量标记消息为已读
      * @throws \App\Common\Exception\WrongRequestException
      */
     public function batchTicketRead()

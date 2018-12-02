@@ -3,7 +3,7 @@ namespace App\Api\Common;
 use App\Common\CommonApi;
 
 /**
- * 动态通知类
+ * 搜索类
  */
 class Search extends CommonApi
 {

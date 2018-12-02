@@ -29,7 +29,7 @@
 
 require_once dirname(__FILE__) . '/init.php';
 
-$projectName = 'PhalApi开源接口框架';
+$projectName = '项目管理系统';
 
 /**
  * 扩展类库
