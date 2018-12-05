@@ -52,22 +52,29 @@ $di->cors = new \PhalApi\CORS\Lite();
 /** ---------------- 定制注册 可选服务组件 ---------------- **/
 
 /**
-// 签名验证服务
-$di->filter = new \PhalApi\Filter\SimpleMD5Filter();
+ * // 签名验证服务
+ * $di->filter = new \PhalApi\Filter\SimpleMD5Filter();
  */
 
 /**
-// 缓存 - Memcache/Memcached
-$di->cache = function () {
-    return new \PhalApi\Cache\MemcacheCache(DI()->config->get('sys.mc'));
-};
+ * // 缓存 - Memcache/Memcached
+ * $di->cache = function () {
+ * return new \PhalApi\Cache\MemcacheCache(DI()->config->get('sys.mc'));
+ * };
  */
 
 /**
-// 支持JsonP的返回
-if (!empty($_GET['callback'])) {
-    $di->response = new \PhalApi\Response\JsonpResponse($_GET['callback']);
+ * // 支持JsonP的返回
+ * if (!empty($_GET['callback'])) {
+ * $di->response = new \PhalApi\Response\JsonpResponse($_GET['callback']);
+ * }
+ */
+
+//header("Content-Type:text/html; charset=UTF-8");
+
+//跨域支持
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header('Access-Control-Allow-Headers:Content-Type,Accept,Referer,Host,Keep-Alive,SystemUser-Agent,X-Requested-With,Cache-Control,Cookie,authorization,token');
 }
- */
 
 

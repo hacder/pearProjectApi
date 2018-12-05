@@ -85,13 +85,14 @@ return array(
 	 'cors' => array(
         //域名白名单
         'whitelist'   => array(
-            //'http://xxx.xx.xxx',
-            //'http://xxx.xxx.xxx'
+            'http://127.0.0.1:8050',
         ),
         //header头
         'headers' => array(
             'Access-Control-Allow-Methods' => 'GET, POST, PUT, DELETE, OPTIONS', //支持的请求类型
-            'Access-Control-Allow-Credentials' => 'true' //支持cookie
+            'Access-Control-Allow-Credentials' => 'true', //支持cookie
+            'Access-Control-Allow-Headers' => 'Content-Type,Accept,Referer,Host,Keep-Alive,SystemUser-Agent,X-Requested-With,Cache-Control,Cookie,authorization,token',
+
         )
     ),
     /**

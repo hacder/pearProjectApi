@@ -44,7 +44,7 @@ class Notify extends CommonApi
                 'order' => array('name' => 'order', 'type' => 'string', 'default' => 'id desc', 'desc' => '排序参数，如：xx ASC,xx DESC')
             ),
             'setFinallySendTime' => array(
-                'ids' => array('name' => 'ids', 'type' => 'Array', 'format' => 'json', 'require' => true, 'desc' => '通知id')
+                'ids' => array('name' => 'ids', 'type' => 'Array', 'format' => 'json', 'desc' => '通知id')
             ),
             'batchTicketRead' => array(
                 'ids' => array('name' => 'ids', 'type' => 'Array', 'format' => 'json', 'desc' => '通知ids')
