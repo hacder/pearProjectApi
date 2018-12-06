@@ -68,6 +68,9 @@ class Notify extends CommonApi
      */
     public function bindClientId()
     {
+        if (!PUSH_NOTIFY) {
+            return true;
+        }
         $clientId = $this->client_id;
         $uid = $this->uid;
         if (!$uid) {
