@@ -114,6 +114,9 @@ function pushDingDing($to_uid = '', $phone = 0, $content = "消息通知", $noti
  */
 function pushNotice($to_uid = '', $content = "消息通知", $notice_type = 'new_notice', $user_id = 0)
 {
+    if (!PUSH_NOTIFY) {
+        return true;
+    }
     $current_user = getCurrentUser();
     if (!$user_id) {
         if (!$current_user) {
