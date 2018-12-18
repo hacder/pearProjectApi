@@ -522,7 +522,7 @@ CREATE TABLE `pms_company_team`  (
   `team_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '团队名称',
   `state` tinyint(1) NULL DEFAULT 1,
   `pid` int(11) NULL DEFAULT 0 COMMENT '上级团队',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '团队表' ROW_FORMAT = Compact;
 
@@ -546,7 +546,7 @@ CREATE TABLE `pms_file`  (
   `objectType` char(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `objectID` mediumint(9) NOT NULL,
   `addedBy` char(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `addedDate` datetime(0) NOT NULL,
+  `addedDate` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `downloads` mediumint(8) UNSIGNED NOT NULL DEFAULT 0,
   `extra` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `deleted` enum('0','1') CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0',
@@ -589,8 +589,8 @@ CREATE TABLE `pms_mailqueue`  (
   `subject` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `body` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `addedBy` char(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `addedDate` datetime(0) NOT NULL,
-  `sendTime` datetime(0) NOT NULL,
+  `addedDate` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `sendTime` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `status` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'wait',
   `failReason` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
@@ -689,12 +689,12 @@ CREATE TABLE `pms_notify`  (
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '内容',
   `type` tinyint(2) NULL DEFAULT 0 COMMENT '通知类型',
   `to_user_id` int(11) NULL DEFAULT 0 COMMENT '送达用户id',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `is_read` tinyint(1) NULL DEFAULT 0 COMMENT '是否已读',
-  `read_time` datetime(0) NULL DEFAULT NULL COMMENT '阅读时间',
+  `read_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '阅读时间',
   `send_data` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '关联数据',
-  `finally_send_time` datetime(0) NULL DEFAULT NULL COMMENT '最终发送时间',
-  `send_time` datetime(0) NULL DEFAULT NULL COMMENT '发送时间',
+  `finally_send_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '最终发送时间',
+  `send_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '发送时间',
   `action_id` int(11) NULL DEFAULT 0 COMMENT '动作id',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 4042 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '动态通知表' ROW_FORMAT = Dynamic;
@@ -760,7 +760,7 @@ CREATE TABLE `pms_project`  (
   `schedule` double(11, 2) NULL DEFAULT 0.00,
   `prepayDate` date NULL DEFAULT NULL,
   `project_desc` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-  `createDate` datetime(0) NULL DEFAULT NULL,
+  `createDate` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `project`(`begin`, `end`, `status`, `order`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1298 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '项目表' ROW_FORMAT = Dynamic;
@@ -782,7 +782,7 @@ CREATE TABLE `pms_project_level`  (
   `level_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '等级名称',
   `money` decimal(10, 2) NULL DEFAULT 0.00 COMMENT '提成',
   `sort` tinyint(2) NULL DEFAULT 0 COMMENT '排序',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '项目评级表' ROW_FORMAT = Compact;
 
@@ -809,7 +809,7 @@ CREATE TABLE `pms_project_log`  (
   `project_id` int(11) NULL DEFAULT 0 COMMENT '项目id',
   `user_id` int(11) NULL DEFAULT 0,
   `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '内容',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `ticket` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '操作标记',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1350 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '项目日志' ROW_FORMAT = Dynamic;
@@ -837,7 +837,7 @@ CREATE TABLE `pms_project_type`  (
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '类型名称',
   `memo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '备注',
   `sort` tinyint(2) NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '项目类型表' ROW_FORMAT = Compact;
 
@@ -859,7 +859,7 @@ CREATE TABLE `pms_project_user`  (
   `user_id` int(11) NULL DEFAULT 0 COMMENT '成员id',
   `is_leader` tinyint(1) NULL DEFAULT 0 COMMENT '是否项目负责人',
   `is_developer` tinyint(1) NULL DEFAULT 0 COMMENT '是否主要开发者',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `is_business` tinyint(1) NULL DEFAULT 0 COMMENT '是否业务',
   `is_owner` int(11) NULL DEFAULT 0 COMMENT '拥有者',
   PRIMARY KEY (`id`) USING BTREE
@@ -874,7 +874,7 @@ CREATE TABLE `pms_system_log`  (
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '日志内容',
   `user_id` int(11) NULL DEFAULT 0,
   `service` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `add_time` datetime(0) NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `add_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`, `add_time`) USING BTREE,
   INDEX `add_time`(`add_time`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2521 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '日志表' ROW_FORMAT = Dynamic;
@@ -1425,15 +1425,15 @@ CREATE TABLE `pms_task`  (
   `status` enum('wait','doing','done','pause','cancel','closed') CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'wait',
   `desc` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `openedBy` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `openedDate` datetime(0) NOT NULL,
+  `openedDate` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `assignedTo` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `deleted` enum('0','1') CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0',
   `task_type` int(11) NULL DEFAULT 1 COMMENT '任务类型',
   `task_tag` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `execute_state` tinyint(2) NULL DEFAULT 0,
   `task_state` tinyint(2) NULL DEFAULT 0,
-  `end_time` datetime(0) NULL DEFAULT NULL,
-  `remind_time` datetime(0) NULL DEFAULT NULL COMMENT '提醒时间',
+  `end_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remind_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '提醒时间',
   `pid` int(11) NULL DEFAULT 0 COMMENT '父任务id',
   `sort` int(11) NULL DEFAULT 0 COMMENT '0',
   PRIMARY KEY (`id`) USING BTREE,
@@ -1477,7 +1477,7 @@ CREATE TABLE `pms_task_file`  (
   `file_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '文件名',
   `file_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '文件类型',
   `task_id` int(11) NULL DEFAULT NULL COMMENT '任务id',
-  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '上传时间',
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '上传时间',
   `user_id` int(11) NULL DEFAULT NULL COMMENT '操作人',
   `old_file_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '原文件名',
   `file_ext` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '文件后缀',
@@ -1496,7 +1496,7 @@ CREATE TABLE `pms_task_log`  (
   `memo` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '操作内容',
   `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `log_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT 'add' COMMENT '操作类型',
-  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '添加时间',
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '添加时间',
   `task_id` int(11) NULL DEFAULT 0 COMMENT '任务id',
   `ticket` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `to_user_id` int(11) NULL DEFAULT 0,
@@ -1656,7 +1656,7 @@ CREATE TABLE `pms_task_tag`  (
   `project` int(11) NULL DEFAULT NULL COMMENT '项目id',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '标签名',
   `color` enum('blue','red','orange','green','brown','purple') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'blue' COMMENT '颜色',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `color_value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
@@ -1683,7 +1683,7 @@ CREATE TABLE `pms_task_to_tag`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `task_id` int(11) NULL DEFAULT 0,
   `tag_id` int(11) NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 95 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Fixed;
 
@@ -1714,7 +1714,7 @@ CREATE TABLE `pms_task_type`  (
   `project` int(11) NULL DEFAULT 0 COMMENT '项目id',
   `sort` tinyint(2) NULL DEFAULT 0 COMMENT '排序',
   `memo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 33 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '任务类型表' ROW_FORMAT = Dynamic;
 
@@ -1748,7 +1748,7 @@ CREATE TABLE `pms_task_type_template`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '类型名称',
   `project_type_id` int(11) NULL DEFAULT 0 COMMENT '项目id',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sort` int(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 52 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '任务类型模板表' ROW_FORMAT = Compact;
@@ -1789,7 +1789,7 @@ CREATE TABLE `pms_task_user`  (
   `task_id` int(11) NULL DEFAULT 0 COMMENT '任务ID',
   `is_executor` tinyint(1) NULL DEFAULT 0 COMMENT '执行者',
   `user_id` int(11) NULL DEFAULT 0 COMMENT '成员id',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `account` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `id`(`id`) USING BTREE
@@ -1876,7 +1876,7 @@ CREATE TABLE `pms_team_user`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `team_id` int(11) NULL DEFAULT 0 COMMENT '所属团队id',
   `user_id` int(11) NULL DEFAULT 0 COMMENT '成员id',
-  `join_time` datetime(0) NULL DEFAULT NULL,
+  `join_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 44 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '团队成员表' ROW_FORMAT = Compact;
 
@@ -1944,7 +1944,7 @@ CREATE TABLE `pms_user_level`  (
   `level_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '描述',
   `sort` tinyint(3) NULL DEFAULT 0 COMMENT '排序',
   `eng_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '英文名称',
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户等级表' ROW_FORMAT = Compact;
 
@@ -1968,7 +1968,7 @@ CREATE TABLE `pms_user_position`  (
   `position_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '职位名称',
   `position_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '描述',
   `sort` tinyint(2) NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
+  `create_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `eng_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '职位表' ROW_FORMAT = Dynamic;
