@@ -875,8 +875,7 @@ CREATE TABLE `pms_system_log`  (
   `user_id` int(11) NULL DEFAULT 0,
   `service` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `add_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`, `add_time`) USING BTREE,
-  INDEX `add_time`(`add_time`) USING BTREE
+    PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2521 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '日志表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
