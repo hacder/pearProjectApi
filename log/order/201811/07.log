@@ -1,0 +1,33 @@
+---------------------------------------------------------------
+[ 2018-11-07T11:17:50+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455225061287394 ] {"id":"1426","start_time":"2018-11-05","end_time":"2018-11-06","house_type_id":"5","nickname":"\u5c0f\u738b","mobile":"18681140825","idcard":"459811995455","remark":"12","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1"}
+---------------------------------------------------------------
+[ 2018-11-07T11:17:50+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455225061287394 ] [{"house_id":"3500","begin_time":"2018-11-05","order_id":1426,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-07T11:19:30+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455225061287394 ] {"id":"1426","start_time":"2018-11-05","end_time":"2018-11-06","house_type_id":"5","nickname":"\u5c0f\u738b","mobile":"18681140825","idcard":"459811995455","remark":"12","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1"}
+---------------------------------------------------------------
+[ 2018-11-07T11:19:30+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455225061287394 ] [{"house_id":"3500","begin_time":"2018-11-05","order_id":1426,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-07T11:31:28+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455225061287394 ] {"id":"1426","start_time":"2018-11-05","end_time":"2018-11-06","house_type_id":"5","nickname":"\u5c0f\u738b","mobile":"18681140825","idcard":"459811995455","remark":"12","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1"}
+---------------------------------------------------------------
+[ 2018-11-07T11:31:28+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455225061287394 ] [{"house_id":"3500","begin_time":"2018-11-05","order_id":1426,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-07T14:11:52+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ addOrder-5455223872064519 ] {"start_time":"2018-11-07 12:00:00","end_time":"2018-11-08 12:00:00","house_type_id":"2","nickname":"\u6d4b\u8bd5","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"66.00","times":"1","keytype":"2","client_id":0,"landlord_id":582,"hotel_id":2,"order_type":1,"createtime":"2018-11-07 14:11:52","total_price":66,"order_no":"5455223872064519","status":2,"house_id":3499}
+---------------------------------------------------------------
+[ 2018-11-07T14:11:52+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ orderPriceList-5455223872064519 ] [{"begin_time":"2018-11-07","order_id":1434,"price":"66.00","paid_price":66,"total_price":"66.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-07T14:15:23+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ addOrder-5455226521073849 ] {"start_time":"2018-11-07 12:00:00","end_time":"2018-11-08 12:00:00","house_type_id":"2","nickname":"\u5c0f\u767d","mobile":"18377893857","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"66.00","times":"1","keytype":"2","client_id":0,"landlord_id":582,"hotel_id":2,"order_type":1,"createtime":"2018-11-07 14:15:23","total_price":66,"order_no":"5455226521073849","status":2}
+---------------------------------------------------------------
+[ 2018-11-07T14:15:23+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ orderPriceList-5455226521073849 ] [{"begin_time":"2018-11-07","order_id":1435,"price":"66.00","paid_price":66,"total_price":"66.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-07T15:51:14+08:00 ] 127.0.0.1 POST admin.net/landlord/order/confirmCheckIn
+[ checkIn-5455226521073849 ] {"id":"1435","nickname":"\u5c0f\u767d","mobile":"18377893857","idcard":"","remark":""}

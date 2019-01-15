@@ -1,0 +1,159 @@
+---------------------------------------------------------------
+[ 2018-11-15T14:26:25+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ addOrder-5455226014375982 ] {"start_time":"2018-11-16 12:00:00","end_time":"2018-11-17 12:00:00","house_type_id":"2","cust_name":"\u6d4b\u8bd5\u9000\u623f","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"88.00","times":"1","keytype":"2","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba","client_id":0,"house_type_name":" \u5bb6\u5ead\u5927\u5e8a\u623f","landlord_id":582,"hotel_id":2,"hotel_name":"\u4e34\u6c7e\u964c\u805a\u9152\u5e97","order_type":1,"createtime":"2018-11-15 14:26:25","total_price":88,"order_no":"5455226014375982","status":2}
+---------------------------------------------------------------
+[ 2018-11-15T14:26:25+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ orderPriceList-5455226014375982 ] [{"begin_time":"2018-11-16","order_id":1447,"price":"88.00","paid_price":88,"total_price":"88.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-15T15:26:55+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455226014375982 ] {"id":2,"hotel_id":0,"before_day_free":1,"before_time_free":"24:00","before_day":0,"before_time":"0","refund_type":0,"refund_percent":0,"is_system":1,"name":"\u514d\u8d39\u53d6\u6d88","level":1}
+---------------------------------------------------------------
+[ 2018-11-15T15:26:55+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455226014375982 ] {"refund":true,"money":88}
+---------------------------------------------------------------
+[ 2018-11-15T15:26:55+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455226014375982 ] {"refund":true,"money":88}
+---------------------------------------------------------------
+[ 2018-11-15T15:27:56+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455226014375982 ] {"id":3,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"22:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u5bbd\u677e","level":3}
+---------------------------------------------------------------
+[ 2018-11-15T15:27:56+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455226014375982 ] {"refund":true,"money":44}
+---------------------------------------------------------------
+[ 2018-11-15T15:27:56+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455226014375982 ] {"refund":true,"money":44}
+---------------------------------------------------------------
+[ 2018-11-15T15:28:42+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455226014375982 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:28:42+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455226014375982 ] {"refund":true,"money":44}
+---------------------------------------------------------------
+[ 2018-11-15T15:28:42+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455226014375982 ] {"refund":true,"money":44}
+---------------------------------------------------------------
+[ 2018-11-15T15:31:03+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ addOrder-5455223985170264 ] {"start_time":"2018-11-16 12:00:00","end_time":"2018-11-18 12:00:00","house_type_id":"2","cust_name":"\u6d4b\u8bd5\u9000\u623f","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"300.00","times":"2","keytype":"2","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba","client_id":0,"house_type_name":" \u5bb6\u5ead\u5927\u5e8a\u623f","landlord_id":582,"hotel_id":2,"hotel_name":"\u4e34\u6c7e\u964c\u805a\u9152\u5e97","order_type":1,"createtime":"2018-11-15 15:31:03","total_price":300,"order_no":"5455223985170264","status":2}
+---------------------------------------------------------------
+[ 2018-11-15T15:31:03+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ orderPriceList-5455223985170264 ] [{"begin_time":"2018-11-16","order_id":1448,"price":"100.00","paid_price":150,"total_price":"100.00","day_num":1},{"begin_time":"2018-11-17","order_id":1448,"price":"200.00","paid_price":150,"total_price":"200.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-15T15:31:26+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:31:26+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"money":75}
+---------------------------------------------------------------
+[ 2018-11-15T15:31:26+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"money":75}
+---------------------------------------------------------------
+[ 2018-11-15T15:32:41+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:33:14+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:33:20+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:35:03+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:35:11+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:35:42+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:35:58+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:36:28+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:36:28+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":false,"money":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:36:50+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:37:16+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:39:53+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:41:00+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:41:42+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:41:42+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":false,"money":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:41:57+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":4,"hotel_id":0,"before_day_free":0,"before_time_free":"0","before_day":1,"before_time":"12:00","refund_type":0,"refund_percent":50,"is_system":1,"name":"\u9002\u4e2d","level":4}
+---------------------------------------------------------------
+[ 2018-11-15T15:44:12+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":2,"before_time_free":"18:00","before_day":1,"before_time":"18:00","refund_type":0,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:44:12+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"money":30}
+---------------------------------------------------------------
+[ 2018-11-15T15:44:12+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"money":30}
+---------------------------------------------------------------
+[ 2018-11-15T15:44:41+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":2,"before_time_free":"18:00","before_day":1,"before_time":"18:00","refund_type":1,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:44:41+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"money":90}
+---------------------------------------------------------------
+[ 2018-11-15T15:44:41+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"money":90}
+---------------------------------------------------------------
+[ 2018-11-15T15:45:55+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":1,"before_time_free":"14:00","before_day":1,"before_time":"18:00","refund_type":1,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:45:55+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"money":90}
+---------------------------------------------------------------
+[ 2018-11-15T15:45:55+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"money":90}
+---------------------------------------------------------------
+[ 2018-11-15T15:46:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":1,"before_time_free":"18:00","before_day":1,"before_time":"18:00","refund_type":1,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:46:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"money":300}
+---------------------------------------------------------------
+[ 2018-11-15T15:46:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"money":300}
+---------------------------------------------------------------
+[ 2018-11-15T15:48:46+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":1,"before_time_free":"18:00","before_day":1,"before_time":"18:00","refund_type":1,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:48:46+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"kou_money":300}
+---------------------------------------------------------------
+[ 2018-11-15T15:48:46+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"kou_money":300}
+---------------------------------------------------------------
+[ 2018-11-15T15:50:29+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":1,"before_time_free":"13:00","before_day":1,"before_time":"18:00","refund_type":1,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:50:29+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"refund_money":210}
+---------------------------------------------------------------
+[ 2018-11-15T15:50:29+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"refund_money":210}
+---------------------------------------------------------------
+[ 2018-11-15T15:54:27+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundRule-5455223985170264 ] {"id":6,"hotel_id":0,"before_day_free":1,"before_time_free":"13:00","before_day":1,"before_time":"18:00","refund_type":1,"refund_percent":30,"is_system":0,"name":null,"level":0}
+---------------------------------------------------------------
+[ 2018-11-15T15:54:27+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrder-5455223985170264 ] {"refund":true,"refund_money":210}
+---------------------------------------------------------------
+[ 2018-11-15T15:54:27+08:00 ] 127.0.0.1 POST admin.net/landlord/order/cancelOrder
+[ refundOrderSuccess-5455223985170264 ] {"refund":true,"refund_money":210}

@@ -1,0 +1,18 @@
+---------------------------------------------------------------
+[ 2018-11-23T08:59:37+08:00 ] 127.0.0.1 POST admin.net/landlord/order/confirmCheckIn
+[ checkIn-5455224261807539 ] {"id":"1449","cust_name":"\u738b\u5c0f\u5e73","mobile":"18681140825","idcard":"","remark":""}
+---------------------------------------------------------------
+[ 2018-11-23T11:06:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ addOrder-5455227132408695 ] {"start_time":"2018-11-23 12:00:00","end_time":"2018-11-24 12:00:00","house_type_id":"5","cust_name":"\u738b\u6653\u96c5","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"100.00","times":"1","keytype":"2","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba","deposit":"250.00","client_id":0,"house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","landlord_id":582,"hotel_id":2,"hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","order_type":1,"createtime":"2018-11-23 11:06:17","total_price":100,"order_no":"5455227132408695","status":2}
+---------------------------------------------------------------
+[ 2018-11-23T11:06:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ orderPriceList-5455227132408695 ] [{"begin_time":"2018-11-23","order_id":1451,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-23T11:06:29+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455227132408695 ] {"id":"1451","start_time":"2018-11-23","end_time":"2018-11-24","house_type_id":"5","cust_name":"\u738b\u6653\u96c5","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"105","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","deposit":"250.00","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba"}
+---------------------------------------------------------------
+[ 2018-11-23T11:06:29+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455227132408695 ] [{"house_id":"3500","begin_time":"2018-11-23","order_id":1451,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-23T11:27:45+08:00 ] 127.0.0.1 POST admin.net/landlord/order/confirmCheckOut
+[ checkOut-5455228715490236 ] {"id":"1450","remark":""}

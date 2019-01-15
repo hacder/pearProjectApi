@@ -1,0 +1,21 @@
+---------------------------------------------------------------
+[ 2018-11-08T09:52:38+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms ] {"submail":{"gateway":"submail","status":"success","result":{"status":"success","send_id":"6f4e7860885d6eccccd37ffa5fe5130d","fee":1,"sms_credits":"1034","transactional_sms_credits":"0"}}}
+---------------------------------------------------------------
+[ 2018-11-08T09:54:49+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms ] {"submail":{"gateway":"submail","status":"success","result":{"status":"success","send_id":"945b07714b18673453995b38896d2e93","fee":1,"sms_credits":"1033","transactional_sms_credits":"0"}}}
+---------------------------------------------------------------
+[ 2018-11-08T09:58:35+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms-exception ] "All the gateways have failed. You can get error details by `$exception->getExceptions()`"
+---------------------------------------------------------------
+[ 2018-11-08T09:58:52+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms-exception ] "All the gateways have failed. You can get error details by `$exception->getExceptions()`"
+---------------------------------------------------------------
+[ 2018-11-08T10:01:34+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms-exception ] {"raw":{"status":"error","code":407,"msg":"Invalid Project or Template ID"}}
+---------------------------------------------------------------
+[ 2018-11-08T10:02:06+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms-exception ] {"submail":{"gateway":"submail","status":"failure","exception":{"raw":{"status":"error","code":407,"msg":"Invalid Project or Template ID"}}}}
+---------------------------------------------------------------
+[ 2018-11-08T10:02:46+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms-exception ] {"submail":{"gateway":"submail","status":"failure","exception":{"raw":{"status":"error","code":407,"msg":"Invalid Project or Template ID"}}}}

@@ -1,0 +1,27 @@
+---------------------------------------------------------------
+[ 2018-11-07T10:30:54+08:00 ] 127.0.0.1 POST admin.net/landlord/order
+[ sms - 18681140825 ] {"status":"error","code":411,"msg":"empty sms signature"}
+---------------------------------------------------------------
+[ 2018-11-07T10:31:58+08:00 ] 127.0.0.1 POST admin.net/landlord/order
+[ sms - 18681140825 ] {"status":"error","code":411,"msg":"empty sms signature"}
+---------------------------------------------------------------
+[ 2018-11-07T10:33:22+08:00 ] 127.0.0.1 POST admin.net/landlord/order
+[ sms - 18681140825 ] {"status":"success","send_id":"5b87af37ed5ad5c51b44652b59c4628d","fee":1,"sms_credits":"1047","transactional_sms_credits":"0"}
+---------------------------------------------------------------
+[ 2018-11-07T10:49:56+08:00 ] 127.0.0.1 POST admin.net/landlord/order
+[ sms - 18681140825 ] {"status":"success","send_id":"a1d41ee8152194b40a0bffc62c6d1f9b","fee":1,"sms_credits":"1046","transactional_sms_credits":"0"}
+---------------------------------------------------------------
+[ 2018-11-07T10:53:18+08:00 ] 127.0.0.1 POST admin.net/landlord/order
+[ sms - 18681140825 ] {"status":"success","send_id":"c948a4b21b2cde93f8f50cd9ae9f5c26","fee":1,"sms_credits":"1045","transactional_sms_credits":"0"}
+---------------------------------------------------------------
+[ 2018-11-07T11:01:05+08:00 ] 127.0.0.1 POST admin.net/landlord/order
+[ sms - 18681140825 ] [{"status":"success","to":"18681140825","send_id":"e3eeabfc98e9d5f5c877b2ce7c2388ca","fee":1,"sms_credits":"1044","transactional_sms_credits":"0"},{"status":"success","to":"18377893857","send_id":"686502d7a991da9992e7e74bcb3c5587","fee":1,"sms_credits":"1043","transactional_sms_credits":"0"}]
+---------------------------------------------------------------
+[ 2018-11-07T11:19:31+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ sms ] [{"status":"success","to":"18681140825","send_id":"a0ce9e650af05503eb24eeaba053f61e","fee":1,"sms_credits":"1041","transactional_sms_credits":"0"}]
+---------------------------------------------------------------
+[ 2018-11-07T14:11:56+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ sms ] {"status":"success","send_id":"5b63dc0b2604b16c0e1ad8e5e9c8cdf9","fee":1,"sms_credits":"1040","transactional_sms_credits":"0"}
+---------------------------------------------------------------
+[ 2018-11-07T14:15:23+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ sms ] {"status":"success","send_id":"7204bbd975ad24c89184eb7c48d39a75","fee":1,"sms_credits":"1039","transactional_sms_credits":"0"}

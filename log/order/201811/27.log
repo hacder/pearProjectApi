@@ -1,0 +1,48 @@
+---------------------------------------------------------------
+[ 2018-11-27T10:04:02+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455225296308147 ] {"id":"1453","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"5","cust_name":"\u738b\u4e8c\u5c0f","mobile":"18637895545","idcard":"","remark":"","pay_type":"7","from":"0","paid_price":"100","house_id":"3499","times":"1","deposit":"250.00","type_id":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"104","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u5176\u4ed6"}
+---------------------------------------------------------------
+[ 2018-11-27T10:04:02+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455225296308147 ] [{"house_id":"3499","begin_time":"2018-11-26","order_id":1453,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T10:26:41+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455228451632079 ] {"id":"1452","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"5","cust_name":"\u848b\u4e09","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1","deposit":"250.00","type_id":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"105","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba"}
+---------------------------------------------------------------
+[ 2018-11-27T10:26:41+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455228451632079 ] [{"house_id":"3500","begin_time":"2018-11-26","order_id":1452,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T10:30:00+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455220732915684 ] {"id":"1455","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"6","cust_name":"\u65b9\u5858\u576a","mobile":"16955445666","idcard":"","remark":"","pay_type":"7","from":"0","paid_price":"98","house_id":"3509","times":"1","deposit":"200.00","type_id":"1","house_type_name":"\u5357\u4eac\u6b65\u884c\u8857\u9644\u8fd1\u623f\u6e90","house_code":"203","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u5176\u4ed6"}
+---------------------------------------------------------------
+[ 2018-11-27T10:30:00+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455220732915684 ] [{"house_id":"3509","begin_time":"2018-11-26","order_id":1455,"price":"98.00","paid_price":98,"total_price":"98.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T10:30:19+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455220732915684 ] {"id":"1455","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"6","cust_name":"\u65b9\u5858\u576a","mobile":"16955445666","idcard":"","remark":"","pay_type":"7","from":"0","paid_price":"98","house_id":"3509","times":"1","deposit":"200.00","type_id":"1","house_type_name":"\u5357\u4eac\u6b65\u884c\u8857\u9644\u8fd1\u623f\u6e90","house_code":"203","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u5176\u4ed6"}
+---------------------------------------------------------------
+[ 2018-11-27T10:30:19+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455220732915684 ] [{"house_id":"3509","begin_time":"2018-11-26","order_id":1455,"price":"98.00","paid_price":98,"total_price":"98.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T10:40:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455225296308147 ] {"id":"1453","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"5","cust_name":"\u738b\u4e8c\u5c0f","mobile":"18637895545","idcard":"","remark":"","pay_type":"7","from":"0","paid_price":"100","house_id":"3499","times":"1","deposit":"250.00","type_id":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"104","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u5176\u4ed6"}
+---------------------------------------------------------------
+[ 2018-11-27T10:40:17+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455225296308147 ] [{"house_id":"3499","begin_time":"2018-11-26","order_id":1453,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T11:39:37+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455228451632079 ] {"id":"1452","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"5","cust_name":"\u848b\u4e09","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1","deposit":"250.00","type_id":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"105","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba"}
+---------------------------------------------------------------
+[ 2018-11-27T11:39:37+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455228451632079 ] [{"house_id":"3500","begin_time":"2018-11-26","order_id":1452,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T11:41:59+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455228451632079 ] {"id":"1452","start_time":"2018-11-26","end_time":"2018-11-27","house_type_id":"5","cust_name":"\u848b\u4e09","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"100","house_id":"3500","times":"1","deposit":"250.00","type_id":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"105","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba"}
+---------------------------------------------------------------
+[ 2018-11-27T11:41:59+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455228451632079 ] [{"house_id":"3500","begin_time":"2018-11-26","order_id":1452,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-27T11:42:21+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455228451632079 ] {"id":"1452","start_time":"2018-11-26","end_time":"2018-11-28","house_type_id":"5","cust_name":"\u848b\u4e09","mobile":"18681140825","idcard":"","remark":"","pay_type":"7","from":"1","paid_price":"200.00","house_id":"3500","times":"2","deposit":"250.00","type_id":"1","house_type_name":"\u9690\u4e16-\u8349\u5802\u7985\u610f\u53cc\u4eba\u95f4","house_code":"105","hotel_name":"\u89c5\u60a6\u5bb6\u4e3b\u9898\u516c\u5bd3\u4e16\u535a\u5e97","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba"}
+---------------------------------------------------------------
+[ 2018-11-27T11:42:21+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455228451632079 ] [{"house_id":"3500","begin_time":"2018-11-26","order_id":1452,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1},{"house_id":"3500","begin_time":"2018-11-27","order_id":1452,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]

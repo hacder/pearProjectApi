@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2018-11-13T11:07:37+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ addOrder-5455228640237159 ] {"start_time":"2018-11-13 12:00:00","end_time":"2018-11-14 12:00:00","house_type_id":"7","cust_name":"\u5f20\u6d0b","mobile":"18681140825","idcard":"454569899855","remark":"","pay_type":"7","from":"1","paid_price":"239.00","times":"1","keytype":"2","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba","deposit":"125.00","client_id":0,"house_type_name":"\u5bb6\u5ead\u8c6a\u534e\u623f","landlord_id":582,"hotel_id":2,"hotel_name":"\u4e34\u6c7e\u964c\u805a\u9152\u5e97","order_type":1,"createtime":"2018-11-13 11:07:37","total_price":239,"order_no":"5455228640237159","status":2}
+---------------------------------------------------------------
+[ 2018-11-13T11:07:37+08:00 ] 127.0.0.1 POST admin.net/landlord/order/booking
+[ orderPriceList-5455228640237159 ] [{"begin_time":"2018-11-13","order_id":1446,"price":"239.00","paid_price":239,"total_price":"239.00","day_num":1}]
+---------------------------------------------------------------
+[ 2018-11-13T15:47:50+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocating-5455228640237159 ] {"id":"1446","start_time":"2018-11-13","end_time":"2018-11-14","house_type_id":"5","cust_name":"\u5f20\u6d0b","mobile":"18681140825","idcard":"454569899855","remark":"","pay_type":"7","from":"1","paid_price":"100.00","house_id":"3496","times":"1","house_type_name":"\u5b89\u5bd3\u5927\u5e8a\u623f","house_code":"101","hotel_name":"\u4e34\u6c7e\u964c\u805a\u9152\u5e97","deposit":"250.00","pay_type_name":"\u5230\u5e97\u73b0\u4ed8","from_name":"\u7ebf\u4e0b\u5ba2\u4eba"}
+---------------------------------------------------------------
+[ 2018-11-13T15:47:50+08:00 ] 127.0.0.1 POST admin.net/landlord/order/allocating
+[ allocatingPriceList-5455228640237159 ] [{"house_id":"3496","begin_time":"2018-11-13","order_id":1446,"price":"100.00","paid_price":100,"total_price":"100.00","day_num":1}]
