@@ -20,8 +20,8 @@ return [
             'file' => '/tmp/easy-sms.log',
         ],
         'submail' => [
-            'app_id' => '29150',
-            'app_key' => '29a09968886d7ab43f035a598bc2755d',
+            'app_id' => '',
+            'app_key' => '',
             'project' => '', // 默认 project，可在发送时 data 中指定
         ],
     ],
