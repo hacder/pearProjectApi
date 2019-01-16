@@ -366,7 +366,18 @@ class Task extends BasicApi
         }
         $this->success('', $list);
     }
-
+    /**
+     * 批量放入回收站
+     */
+    public function recycleBatch()
+    {
+        try {
+            $this->model->recycleBatch(Request::post('stageCode'));
+        } catch (\Exception $e) {
+            $this->error($e->getMessage(), $e->getCode());;
+        }
+        $this->success('');
+    }
 
     /**
      * 放入回收站

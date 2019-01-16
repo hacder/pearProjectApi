@@ -109,9 +109,13 @@ class TaskStages extends CommonModel
         if (!$stage) {
             throw new \Exception('该列表不存在', 1);
         }
+        $info = Task::where(['stage_code' => $code, 'deleted' => 0])->find();
+        if ($info) {
+            throw new \Exception('请先清空此列表上的任务，然后再删除这个列表', 2);
+        }
         $result = self::destroy(['code' => $code]);
         if (!$result) {
-            throw new \Exception('删除失败', 2);
+            throw new \Exception('删除失败', 3);
         }
         return $result;
     }

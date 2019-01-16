@@ -1,8 +1,8 @@
 {
-  "type": "easyProject",
-  "name": "easyProject",
-  "description": "easyProject",
-  "homepage": "https://project.vilson.xyz",
+  "type": "pearProject",
+  "name": "pearProject",
+  "description": "pearProject",
+  "homepage": "https://beta.vilson.xyz",
   "keywords": [
     "project",
     "plan"

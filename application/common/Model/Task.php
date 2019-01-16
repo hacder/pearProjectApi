@@ -2,6 +2,7 @@
 
 namespace app\common\Model;
 
+use function GuzzleHttp\Promise\task;
 use service\DateService;
 use think\Db;
 use think\facade\Hook;
@@ -402,6 +403,32 @@ class Task extends CommonModel
         $sql .= " limit {$offset},{$limit}";
         $list = Db::query($sql);
         return ['list' => $list, 'total' => $total];
+    }
+
+    /**
+     * 批量放入回收站
+     * @param $stageCode
+     * @return Task
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function recycleBatch($stageCode)
+    {
+        $stage = TaskStages::where(['code' => $stageCode])->find();
+        if (!$stage) {
+            throw new \Exception('任务列表不存在', 1);
+        }
+        $where = ['stage_code' => $stageCode, 'deleted' => 0];
+        $taskCodes = self::where($where)->column('code');
+        $memberCode = getCurrentMember()['code'];
+        if ($taskCodes) {
+            foreach ($taskCodes as $taskCode) {
+                self::taskHook($memberCode, $taskCode, 'recycle');
+            }
+        }
+        $result = self::update(['deleted' => 1, 'deleted_time' => nowTime()], $where);
+        return $result;
     }
 
     /**
