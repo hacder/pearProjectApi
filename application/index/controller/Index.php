@@ -93,7 +93,7 @@ class Index extends BasicApi
                 throw new Exception("当前数据库不支持innodb存储引擎，请开启后再重新尝试安装");
             }
 
-            $pdo->query("CREATE DATABASE IF NOT EXISTS `{$mysqlDatabase}` CHARACTER SET utf8 COLLATE utf8_general_ci;");
+            $pdo->query("CREATE DATABASE IF NOT EXISTS `{$mysqlDatabase}` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;");
 
             $pdo->query("USE `{$mysqlDatabase}`");
 
