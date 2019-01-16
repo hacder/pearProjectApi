@@ -12,6 +12,7 @@ class Organization extends CommonModel
     protected $append = [];
 
     /**
+     * 创建组织
      * @param $memberData
      * @param array $data
      * @return Organization
@@ -21,6 +22,9 @@ class Organization extends CommonModel
      */
     public static function createOrganization($memberData, $data = [])
     {
+        $defaultAdminAuthId = 3;//默认管理员权限id
+        $defaultMemberAuthId = 4;//默认成员权限id
+
         if (!isset($data['name'])) {
             $data['name'] = $memberData['name'] . '的个人项目';
         }
@@ -30,15 +34,15 @@ class Organization extends CommonModel
         $data['owner_code'] = $memberData['code'];
         $organization = self::create($data);
 
-        $defaultAdminAuth = ProjectAuth::get(1)->toArray();
-        $defaultMemberAuth = ProjectAuth::get(2)->toArray();
+        $defaultAdminAuth = ProjectAuth::get($defaultAdminAuthId)->toArray();
+        $defaultMemberAuth = ProjectAuth::get($defaultMemberAuthId)->toArray();
         unset($defaultAdminAuth['id']);
         unset($defaultMemberAuth['id']);
         $defaultAdminAuth['organization_code'] = $defaultMemberAuth['organization_code'] = $data['code'];
         $defaultAdminAuth = ProjectAuth::create($defaultAdminAuth);
         $defaultMemberAuth = ProjectAuth::create($defaultMemberAuth);
-        $defaultAdminAuthNode = ProjectAuthNode::where(['auth' => 1])->select()->toArray();
-        $defaultMemberAuthNode = ProjectAuthNode::where(['auth' => 2])->select()->toArray();
+        $defaultAdminAuthNode = ProjectAuthNode::where(['auth' => $defaultAdminAuthId])->select()->toArray();
+        $defaultMemberAuthNode = ProjectAuthNode::where(['auth' => $defaultMemberAuthId])->select()->toArray();
         foreach ($defaultAdminAuthNode as &$item) {
             unset($item['id']);
             $item['auth'] = $defaultAdminAuth['id'];

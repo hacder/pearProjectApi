@@ -60,13 +60,13 @@ class DepartmentMember extends CommonModel
                 throw new \Exception('该用户不存在', 4);
             }
             $auth = ProjectAuth::where(['organization_code' => $orgCode, 'is_default' => 1])->field('id')->find();
-            if (!$auth) {
-                $authId = '';
+            $authId = '';
+            if ($auth) {
+                $authId = $auth['id'];//权限id
             }
-            $authId = $auth['id'];//权限id
             $data = [
                 'position' => '资深工程师',
-                'department' => '某某公司－某某某事业群－某某平台部－某某技术部－BM',
+                'department' => '某某公司－某某某事业群－某某平台部－某某技术部',
                 'code' => createUniqueCode('memberAccount'),
                 'member_code' => $accountCode,
                 'organization_code' => $orgCode,
