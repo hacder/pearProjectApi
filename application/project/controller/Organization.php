@@ -52,8 +52,8 @@ class Organization extends BasicApi
     {
         $data = $request::only('name,address,areas');
 
-        list($data['province'], $data['city'], $data['area']) = json_decode($data['areas']);
-        unset($data['areas']);
+//        list($data['province'], $data['city'], $data['area']) = json_decode($data['areas']);
+//        unset($data['areas']);
 
         try {
             $result = \app\common\Model\Organization::createOrganization(getCurrentMember(), $data);
@@ -90,8 +90,8 @@ class Organization extends BasicApi
         $data = $request::only('name,address,areas');
         $organizationCode = $request::param('organizationCode');
 
-        list($data['province'], $data['city'], $data['area']) = json_decode($data['areas']);
-        unset($data['areas']);
+//        list($data['province'], $data['city'], $data['area']) = json_decode($data['areas']);
+//        unset($data['areas']);
 
         $result = $this->model->edit($organizationCode, $data);
         if ($result) {

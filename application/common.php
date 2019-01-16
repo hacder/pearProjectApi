@@ -108,6 +108,20 @@ function nowTime()
 
 }
 
+// 判断文件或目录是否有写的权限
+function is_really_writable($file)
+{
+    if (DIRECTORY_SEPARATOR == '/' AND @ ini_get("safe_mode") == FALSE) {
+        return is_writable($file);
+    }
+    if (!is_file($file) OR ($fp = @fopen($file, "r+")) === FALSE) {
+        return FALSE;
+    }
+
+    fclose($fp);
+    return TRUE;
+}
+
 /**
  * UTF8字符串加密
  * @param string $string

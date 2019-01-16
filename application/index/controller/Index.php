@@ -3,15 +3,11 @@
 namespace app\index\controller;
 
 use app\common\Model\Areas;
-use app\common\Model\CommonModel;
 use controller\BasicApi;
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Exception;
+use PDO;
 use service\MessageService;
-use think\facade\Cache;
 use think\facade\Request;
-use think\File;
 
 
 /**
@@ -21,26 +17,133 @@ use think\File;
 class Index extends BasicApi
 {
 
+    protected $siteName = 'pearProject';
 
-    /**
-     * @throws \PhpOffice\PhpSpreadsheet\Exception
-     */
     public function index()
     {
-//        Cache::store('redis')->set('vilson',5,5);
-//        Cache::store('redis')->dec('vilson',1);
-//        $this->success('success', Cache::store('redis')->get('vilson'));
 
-//        $spreadsheet = new Spreadsheet();
-//        $sheet = $spreadsheet->getActiveSheet();
-//        $sheet->setCellValue('A1', 'Hello World !');
-//        $writer = new Xlsx($spreadsheet);
-//        $writer->save('hello world.xlsx');
-
-        echo "success";
-        die;
         $this->success('success');
 
+    }
+
+    /**
+     * 安装
+     */
+    public function install()
+    {
+
+        $dataPath = env('root_path') . 'data/';
+        //数据库配置文件
+        $dbConfigFile = env('config_path') . 'database.php';
+        // 锁定的文件
+        $lockFile = $dataPath . 'install.lock';
+        $err = '';
+
+        if (is_file($lockFile)) {
+            $err = "当前已经安装{$this->siteName}，如果需要重新安装，请手动移除data/install.lock文件";
+        } else if (version_compare(PHP_VERSION, '7.0.0', '<')) {
+            $err = "当前版本(" . PHP_VERSION . ")过低，请使用PHP7.0以上版本";
+        } else if (!extension_loaded("PDO")) {
+            $err = "当前未开启PDO，无法进行安装";
+        } else if (!is_really_writable($dbConfigFile)) {
+            $open_basedir = ini_get('open_basedir');
+            if ($open_basedir) {
+                $dirArr = explode(PATH_SEPARATOR, $open_basedir);
+                if ($dirArr && in_array(__DIR__, $dirArr)) {
+                    $err = '当前服务器因配置了open_basedir，导致无法读取父目录';
+                }
+            }
+            if (!$err) {
+                $err = '当前权限不足，无法写入配置文件application/database.php';
+            }
+        }
+        if ($err) {
+            $this->error($err);
+        }
+
+        $mysqlHostname = isset($_POST['mysqlHost']) ? $_POST['mysqlHost'] : '127.0.0.1';
+        $mysqlHostport = isset($_POST['mysqlHostport']) ? $_POST['mysqlHostport'] : 3306;
+        $hostArr = explode(':', $mysqlHostname);
+        if (count($hostArr) > 1) {
+            $mysqlHostname = $hostArr[0];
+            $mysqlHostport = $hostArr[1];
+        }
+        $mysqlUsername = isset($_POST['mysqlUsername']) ? $_POST['mysqlUsername'] : 'root';
+        $mysqlPassword = isset($_POST['mysqlPassword']) ? $_POST['mysqlPassword'] : 'root';
+        $mysqlDatabase = isset($_POST['mysqlDatabase']) ? $_POST['mysqlDatabase'] : 'pearProject';
+        $mysqlPrefix = isset($_POST['mysqlPrefix']) ? $_POST['mysqlPrefix'] : 'pear_';
+        try {
+            ignore_user_abort();
+            set_time_limit(0);
+            //检测能否读取安装文件
+            $sql = @file_get_contents($dataPath . 'pearproject.sql');
+            if (!$sql) {
+                throw new Exception("无法读取data/pearproject.sql文件，请检查是否有读权限");
+            }
+            $sql = str_replace("`pms_", "`{$mysqlPrefix}", $sql);
+            $pdo = new PDO("mysql:host={$mysqlHostname};port={$mysqlHostport}", $mysqlUsername, $mysqlPassword, array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+            ));
+
+            //检测是否支持innodb存储引擎
+            $pdoStatement = $pdo->query("SHOW VARIABLES LIKE 'innodb_version'");
+            $result = $pdoStatement->fetch();
+            if (!$result) {
+                throw new Exception("当前数据库不支持innodb存储引擎，请开启后再重新尝试安装");
+            }
+
+            $pdo->query("CREATE DATABASE IF NOT EXISTS `{$mysqlDatabase}` CHARACTER SET utf8 COLLATE utf8_general_ci;");
+
+            $pdo->query("USE `{$mysqlDatabase}`");
+
+            $pdo->exec($sql);
+
+            $config = @file_get_contents($dbConfigFile);
+            $callback = function ($matches) use ($mysqlHostname, $mysqlHostport, $mysqlUsername, $mysqlPassword, $mysqlDatabase, $mysqlPrefix) {
+                $field = ucfirst($matches[1]);
+                $replace = ${"mysql{$field}"};
+                if ($matches[1] == 'hostport' && $mysqlHostport == 3306) {
+                    $replace = '';
+                }
+                return "'{$matches[1]}'{$matches[2]}=>{$matches[3]}'{$replace}',";
+            };
+
+            $config = preg_replace_callback("/'(hostname|database|username|password|hostport|prefix)'(\s+)=>(\s+)(.*),/", $callback, $config);
+            //检测能否成功写入数据库配置
+            $result = @file_put_contents($dbConfigFile, $config);
+
+            if (!$result) {
+                throw new Exception("无法写入数据库信息到config/database.php文件，请检查是否有写权限");
+            }
+
+            //检测能否成功写入lock文件
+            $result = @file_put_contents($lockFile, 1);
+            if (!$result) {
+                throw new Exception("无法写入安装锁定到data/install.lock文件，请检查是否有写权限");
+            }
+            $this->success('安装成功，请登录');
+        } catch (PDOException $e) {
+            $err = $e->getMessage();
+        } catch (Exception $e) {
+            $err = $e->getMessage();
+        }
+        if ($err) {
+            $this->error($err);
+        }
+        $this->success('安装成功，请登录');
+
+    }
+
+    public function checkInstall()
+    {
+        $dataPath = env('root_path') . '/data/';
+        // 锁定的文件
+        $lockFile = $dataPath . '/install.lock';
+        if (!is_file($lockFile)) {
+            $this->error('', 201);
+        }
+        $this->success();
     }
 
     /**
